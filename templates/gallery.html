@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+    <title>output images..</title>
+  </head>
+  <body>
+    {{image_names}}
+    <hr>
+    {% for image_name in image_names %}
+      <img src="{{ url_for('upload', filename=image_name) }}" style="width: 100px">
+    {% endfor %}
+  </body>
+</html>

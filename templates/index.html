@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>File Upload</title>
+  </head>
+  <body>
+    <h1>File Upload</h1>
+    <form method="POST" action="" enctype="multipart/form-data">
+      <p><input type="file" name="Images"></p>
+      <!--<p><input type="submit" name="button" value="Img_Person"></p>-->
+      <p><input type="file" name="Cloth"></p>
+      <p><input type="submit" name="button" value="Upload Data"></p>
+      <p><input type="submit" name="button" value="Run the Model"></p>
+    </form>
+    <hr>
+    {% for file in files %}
+      <img src="{{ url_for('upload', filename=file) }}" style="width: 64px">
+    {% endfor %}  
+  </body>
+</html>
